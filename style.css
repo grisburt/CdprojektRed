@@ -60,18 +60,32 @@ a {
     gap: 20px;
 }
 
-.video {
+.movie {
     display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
 }
 
-.video-text {
+.movie img {
+    position: absolute;
+    top: 100px;
+    left: 40%;
+    width: 25%;
+    height: auto;
+}
+
+.movietxt {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top:0;
     font-family: 'proxima-nova-extra-condensed';
-    color: black;
+    font-size: 39px;
+    font-weight: 800;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    z-index: 1;
 }
 
 .more {
@@ -158,6 +172,7 @@ p {
 .letter {
     display: flex;
     flex-direction: column;
+    position: relative;
     justify-content: center;
     align-items: center;
     background-color: #171717;
@@ -167,8 +182,8 @@ p {
 }
 .letter img {
     position: absolute;
-    left: 420px;
-    bottom: 10px;
+    right: -3em;
+    bottom: 18px;
 }
 .jobstitle {
     display: block;
@@ -224,14 +239,38 @@ input {
     background-color: #f6f6f6;
 }
 
-
-
 .locations {
     display: flex;
+    flex-direction: column;
+    color: #000;
+}
+
+.locations img {
+    width: 471px;
+    height: 217px;
+    filter: brightness(0.6);
+}
+
+.studio h3 {
+    font-family: 'proxima-nova-extra-condensed';
+    font-size: 45px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #db0d15;
+}
+
+h3 span {
+    border-bottom: 3px solid #000;
+}
+
+.city {
+    display: flex;
     flex-wrap: wrap;
-    width: 855px;
+    position: relative;
+    width: 970px;
     gap: 24px;
     padding-top: 50px;
+    color: #fff;
 }
 
 .contact {
@@ -241,13 +280,25 @@ input {
 }
 
 .overlays {
-    position: absolute;
-    margin: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 300px;
+    position: absolute;
+    width: 471px ;
+    margin-top: -8rem;
+    font-family: 'proxima-nova-extra-condensed';    
+    color: #fff;
+}
+
+.txtbig {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.addr {
+    font-size: 16px;
+    line-height: 23px;
 }
 
 footer {
