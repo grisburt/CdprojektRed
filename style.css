@@ -8,11 +8,38 @@
     height: 100vh;
  }
 
- @font-face {
-    font-family: 'proxima-nova-extra-condensed',sans-serif;
-   /* src: url('https://fonts.bunny.net/css?family=figtree:300,400,500,600,700,800,900');*/
-    src: url('https://fonts.bunny.net/css?family=lato:300,400,700,900');
+ section {
+    margin: 5rem 10rem 3rem 10rem;
  }
+ /* @font-face {
+    font-family: 'proxima-nova-extra-condensed',sans-serif;
+    src: url('https://fonts.bunny.net/css?family=figtree:300,400,500,600,700,800,900');
+    src: url('https://fonts.bunny.net/css?family=lato:300,400,700,900');
+ } */
+
+ @font-face {
+    font-family: 'proxima-nova-extra-condensed';
+    src: url('/fonts/Demo_Fonts/Fontspring-DEMO-proximanovaexcn-bold.otf') format("opentype");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'proxima-nova-extra-condensed';
+    src: url('/fonts/Demo_Fonts/Fontspring-DEMO-proximanovaexcn-extrabold.otf') format("opentype");
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: 'proxima-nova-extra-condensed';
+    src: url('/fonts/Demo_Fonts/Fontspring-DEMO-proximanovaexcn-black.otf') format("opentype");
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'proxima-nova-extra-condensed';
+    src: url('/fonts/Demo_Fonts/Fontspring-DEMO-proximanovaexcn-regular.otf') format("opentype");
+    font-weight: 400;
+}
 
 nav {
     display: flex;
@@ -30,7 +57,7 @@ nav ul {
     gap: 20px;
     font-family: 'proxima-nova-extra-condensed';
     font-size: 20px;
-    font-weight: 900;
+    font-weight: 800;
     text-transform: uppercase;
 }
 
@@ -60,6 +87,21 @@ a {
     gap: 20px;
 }
 
+.network img {
+    border-radius: 25px;
+    width: 15px;
+    height: 15px;
+    padding: 10px;
+    border: 1px solid #3a3a3a;
+    text-align: center;
+    margin-right: 4px;
+}
+
+.network img:hover{
+    border-color:  #db0d15;
+    transition: 0.3s;
+}
+
 .movie {
     display: flex;
     justify-content: center;
@@ -69,9 +111,9 @@ a {
 
 .movie img {
     position: absolute;
-    top: 100px;
-    left: 40%;
-    width: 25%;
+    top: 210px;
+    left: 42%;
+    width: 15%;
     height: auto;
 }
 
@@ -85,16 +127,16 @@ a {
     color: #fff;
     text-transform: uppercase;
     text-align: center;
+    top: 380px;
     z-index: 1;
 }
 
 .more {
     display: flex;
     justify-content:space-around;
-    margin: 80px 50px;
 }
 
-.more img {
+.meet img, .join img {
     filter: brightness(0.6);
 }
 
@@ -106,10 +148,11 @@ a {
       
 .overlay {
     position: absolute;
-    margin-top: 180px;
+    margin-top: 130px;
 }
 
 .overlay div {
+    font-family: 'proxima-nova-extra-condensed';
     text-align: center;
     font-size: 120px;
     color: transparent;
@@ -146,15 +189,14 @@ a {
 .rulestxt, .jointxt {
     display: flex;
     padding: 20px 0;
-    font-family: 'proxima-nova-extra-condensed';
     color: #000;
 }
 
 .rules1, .rules2, .join1, .join2 {
     display: block;
     width: 250px;
-    font-size: 24px;
-    font-weight: 900;
+    font-size: 25px;
+    font-weight: 800;
     text-transform: uppercase;
     line-height: 30px;
 }
@@ -166,6 +208,7 @@ a {
 p {
     display: block;
     text-align: start;
+    font-size: 15px;
     width: 300px;
 }
 
@@ -176,10 +219,11 @@ p {
     justify-content: center;
     align-items: center;
     background-color: #171717;
-    margin: 50px;
+    margin: 100px;
     padding: 30px;
     font-family: 'proxima-nova-extra-condensed';
 }
+
 .letter img {
     position: absolute;
     right: -3em;
@@ -194,15 +238,22 @@ p {
 
 .jobs span {
     font-size: 25px;
-    font-weight: 300;
+    font-weight: 400;
     color: #5d5c5b;
 }
 
+form {
+    width: 750px;
+}
+
 .mail {
+    display: flex;
+    justify-content: space-between;
     border: 1px solid #fff;
     border-radius: 30px;
     background-color: #fff;
     margin-top: 20px;
+    width: 100%;
 }
 
 .btn-mail {
@@ -236,6 +287,7 @@ input {
     display: flex;
     justify-content:space-evenly;
     padding: 30px;
+    margin: 0 -10rem -2.7rem -10rem;
     background-color: #f6f6f6;
 }
 
@@ -247,14 +299,14 @@ input {
 
 .locations img {
     width: 471px;
-    height: 217px;
+    height: 145px;
     filter: brightness(0.6);
 }
 
 .studio h3 {
     font-family: 'proxima-nova-extra-condensed';
     font-size: 45px;
-    font-weight: 900;
+    font-weight: 800;
     text-transform: uppercase;
     color: #db0d15;
 }
@@ -273,12 +325,6 @@ h3 span {
     color: #fff;
 }
 
-.contact {
-    display: flex;
-    flex-direction: column;
-    color: #000;
-}
-
 .overlays {
     display: flex;
     flex-direction: column;
@@ -289,21 +335,59 @@ h3 span {
     margin-top: -8rem;
     font-family: 'proxima-nova-extra-condensed';    
     color: #fff;
+    text-transform: capitalize;
 }
 
 .txtbig {
     font-size: 25px;
     font-weight: 700;
+    margin-bottom: 13px;
 }
 
-.addr {
+.addr .zipcode {
     font-size: 16px;
     line-height: 23px;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    color: #000;
+}
+
+.contact h3 {
+    margin-bottom: 3.5rem;
+}
+
+.contact .txt {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 30px;
+}
+
+.contact .email{
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.btn-contact {
+    border: 1px solid #db0d15;
+    border-radius: 30px;
+    background-color: #db0d15;
+    color: #fff;
+    width: 225px;
+    height: 50px;
+    margin: 5px;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 800;
+    transition: 0.4s;
 }
 
 footer {
     display: flex;
     flex-direction: column;
+    background-color: black;
 }
 
 .menudown {
@@ -311,9 +395,7 @@ footer {
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-    height: 160px;
-    padding: 15px;
-    background-color: black;
+    height: 100px;
     color: white;
 }
 
@@ -321,8 +403,8 @@ footer {
     display: flex;
     gap: 20px;
     font-family: 'proxima-nova-extra-condensed';
-    font-size: 21px;
-    font-weight: 800;
+    font-size: 17px;
+    font-weight: 700;
     text-transform: uppercase;
     color: #fff;
 }
@@ -338,6 +420,7 @@ footer img {
 
 .secondmenu {
     display: flex;
+    justify-content: center;
     color: #484c53;
-    
+    margin: 10px; 
 }
