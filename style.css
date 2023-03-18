@@ -18,27 +18,48 @@
  } */
 
  @font-face {
-    font-family: 'proxima-nova-extra-condensed';
+    font-family: "proximanovaex bold";
     src: url('/fonts/Demo_Fonts/Fontspring-DEMO-proximanovaexcn-bold.otf') format("opentype");
-    font-weight: 700;
 }
 
 @font-face {
-    font-family: 'proxima-nova-extra-condensed';
+    font-family: "proximanovaex exbold";
     src: url('/fonts/Demo_Fonts/Fontspring-DEMO-proximanovaexcn-extrabold.otf') format("opentype");
-    font-weight: 800;
 }
 
 @font-face {
-    font-family: 'proxima-nova-extra-condensed';
+    font-family: 'proximanovaex black';
     src: url('/fonts/Demo_Fonts/Fontspring-DEMO-proximanovaexcn-black.otf') format("opentype");
-    font-weight: 900;
 }
 
 @font-face {
-    font-family: 'proxima-nova-extra-condensed';
+    font-family: 'proximanovaex regular';
     src: url('/fonts/Demo_Fonts/Fontspring-DEMO-proximanovaexcn-regular.otf') format("opentype");
-    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'proximanova normal';
+    src: url('/fonts/Demo_Fonts/Fontspring-DEMO-proximanova-regular.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'proximanova semibold';
+    src: url('/fonts/Demo_Fonts/Fontspring-DEMO-proximanova-semibold.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'proximanovacond bold';
+    src: url('/fonts/Demo_Fonts/Fontspring-DEMO-proximanovacond-extrabold.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'proximanovacond normal';
+    src: url('/fonts/Demo_Fonts/Fontspring-DEMO-proximanovacond-regular.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'proximanovacond light';
+    src: url('/fonts/Demo_Fonts/Fontspring-DEMO-proximanovacond-light.otf') format("opentype");
 }
 
 nav {
@@ -53,11 +74,9 @@ nav {
 
 nav ul {
     display: flex;
-
     gap: 20px;
-    font-family: 'proxima-nova-extra-condensed';
+    font-family: "proximanovaex exbold";
     font-size: 20px;
-    font-weight: 800;
     text-transform: uppercase;
 }
 
@@ -121,10 +140,11 @@ a {
     display: flex;
     flex-direction: column;
     position: absolute;
-    font-family: 'proxima-nova-extra-condensed';
+    font-family: "proximanovacond bold";
     font-size: 39px;
-    font-weight: 800;
     color: #fff;
+    letter-spacing: 7px;
+    line-height: 41px;
     text-transform: uppercase;
     text-align: center;
     top: 380px;
@@ -152,12 +172,11 @@ a {
 }
 
 .overlay div {
-    font-family: 'proxima-nova-extra-condensed';
+    font-family: "proximanovaex bold";
     text-align: center;
     font-size: 120px;
     color: transparent;
     -webkit-text-stroke: 1px #fff;
-    font-weight: 800;
     text-transform: uppercase;
 }
    
@@ -176,9 +195,8 @@ a {
     border-radius: 25px;
     background-color: transparent;
     color: #fff;
-    font-family: 'proxima-nova-extra-condensed';
+    font-family: "proximanovacond bold";
     text-transform: uppercase;
-    font-weight: 700;
     font-size: 17px;
 }
 
@@ -195,8 +213,8 @@ a {
 .rules1, .rules2, .join1, .join2 {
     display: block;
     width: 250px;
-    font-size: 25px;
-    font-weight: 800;
+    font-family: "proximanovaex exbold";
+    font-size: 35px;
     text-transform: uppercase;
     line-height: 30px;
 }
@@ -208,8 +226,10 @@ a {
 p {
     display: block;
     text-align: start;
+    font-family: "proximanova normal";
     font-size: 15px;
-    width: 300px;
+    width: 296px;
+    line-height: 25px;
 }
 
 .letter {
@@ -220,8 +240,8 @@ p {
     align-items: center;
     background-color: #171717;
     margin: 100px;
-    padding: 30px;
-    font-family: 'proxima-nova-extra-condensed';
+    padding: 55px;
+
 }
 
 .letter img {
@@ -229,7 +249,10 @@ p {
     right: -3em;
     bottom: 18px;
 }
+
 .jobstitle {
+    font-family: "proximanovaex bold";
+    text-transform: uppercase;
     display: block;
     font-size: 55px;
     font-weight: 800;
@@ -237,8 +260,8 @@ p {
 }
 
 .jobs span {
+    font-family: 'proximanovacond normal';
     font-size: 25px;
-    font-weight: 400;
     color: #5d5c5b;
 }
 
@@ -264,9 +287,9 @@ form {
     width: 225px;
     height: 50px;
     margin: 5px;
+    font-family: 'proximanovaex bold';
     font-size: 17px;
     text-transform: uppercase;
-    font-weight: 800;
     transition: 0.4s;
 }
 
@@ -281,6 +304,12 @@ input {
     font-size: 16px;
     border: none;
     padding: 10px;
+}
+
+::placeholder {
+    font-family: 'proximanovacond normal';
+    opacity: 0.25;
+
 }
 
 .studio {
@@ -304,9 +333,8 @@ input {
 }
 
 .studio h3 {
-    font-family: 'proxima-nova-extra-condensed';
+    font-family: 'proximanovaex bold';
     font-size: 45px;
-    font-weight: 800;
     text-transform: uppercase;
     color: #db0d15;
 }
@@ -333,18 +361,18 @@ h3 span {
     position: absolute;
     width: 471px ;
     margin-top: -8rem;
-    font-family: 'proxima-nova-extra-condensed';    
     color: #fff;
     text-transform: capitalize;
 }
 
 .txtbig {
+    font-family: 'proximanovaex bold';
     font-size: 25px;
-    font-weight: 700;
     margin-bottom: 13px;
 }
 
-.addr .zipcode {
+.addr, .zipcode {
+    font-family: 'proximanovacond normal';
     font-size: 16px;
     line-height: 23px;
 }
@@ -359,15 +387,16 @@ h3 span {
     margin-bottom: 3.5rem;
 }
 
-.contact .txt {
+.txt {
+    font-family: 'proximanova semibold';
+    text-transform: capitalize;
     font-size: 14px;
-    font-weight: 500;
     line-height: 30px;
 }
 
-.contact .email{
+.email {
+    font-family: 'proximanovaex bold';
     font-size: 24px;
-    font-weight: 900;
 }
 
 .btn-contact {
@@ -379,8 +408,8 @@ h3 span {
     height: 50px;
     margin: 5px;
     font-size: 17px;
+    font-family: 'proximanovaex bold';
     text-transform: uppercase;
-    font-weight: 800;
     transition: 0.4s;
 }
 
@@ -402,10 +431,9 @@ footer {
 .menudown ul {
     display: flex;
     gap: 20px;
-    font-family: 'proxima-nova-extra-condensed';
-    font-size: 17px;
-    font-weight: 700;
-    text-transform: uppercase;
+    font-family: 'proximanovaex bold';
+    font-size: 15px;
+    text-transform: capitalize;
     color: #fff;
 }
 
