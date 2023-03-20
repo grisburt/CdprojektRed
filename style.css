@@ -4,18 +4,13 @@
  }
 
  body {
-    width: 100%;
+
     height: 100vh;
  }
 
  section {
     margin: 5rem 10rem 3rem 10rem;
  }
- /* @font-face {
-    font-family: 'proxima-nova-extra-condensed',sans-serif;
-    src: url('https://fonts.bunny.net/css?family=figtree:300,400,500,600,700,800,900');
-    src: url('https://fonts.bunny.net/css?family=lato:300,400,700,900');
- } */
 
  @font-face {
     font-family: "proximanovaex bold";
@@ -153,7 +148,8 @@ a {
 
 .more {
     display: flex;
-    justify-content:space-around;
+    justify-content: center;
+    gap: 3rem;
 }
 
 .meet img, .join img {
@@ -238,8 +234,8 @@ p {
     position: relative;
     justify-content: center;
     align-items: center;
+    width: 70%;
     background-color: #171717;
-    margin: 100px;
     padding: 55px;
 
 }
@@ -247,7 +243,7 @@ p {
 .letter img {
     position: absolute;
     right: -3em;
-    bottom: 18px;
+    bottom: 45px;
 }
 
 .jobstitle {
@@ -266,7 +262,7 @@ p {
 }
 
 form {
-    width: 750px;
+    width: 80%;
 }
 
 .mail {
@@ -306,16 +302,18 @@ input {
     padding: 10px;
 }
 
+input:focus {
+    outline: n;
+}
 ::placeholder {
     font-family: 'proximanovacond normal';
     opacity: 0.25;
-
 }
 
 .studio {
     display: flex;
-    justify-content:space-evenly;
-    padding: 30px;
+    justify-content:center;
+    gap: 3rem;
     margin: 0 -10rem -2.7rem -10rem;
     background-color: #f6f6f6;
 }
@@ -324,12 +322,15 @@ input {
     display: flex;
     flex-direction: column;
     color: #000;
+    padding-bottom: 30px;
 }
 
 .locations img {
     width: 471px;
     height: 145px;
-    filter: brightness(0.6);
+    object-fit: cover;
+    object-position: 100% 0;
+    filter: brightness(0.5);
 }
 
 .studio h3 {
