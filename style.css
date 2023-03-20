@@ -3,16 +3,16 @@
     padding: 0;
  }
 
- body {
+html {
+    scroll-behavior: smooth;
+}
 
+body {
     height: 100vh;
  }
 
- section {
-    margin: 5rem 10rem 3rem 10rem;
- }
 
- @font-face {
+@font-face {
     font-family: "proximanovaex bold";
     src: url('/fonts/Demo_Fonts/Fontspring-DEMO-proximanovaexcn-bold.otf') format("opentype");
 }
@@ -44,6 +44,11 @@
 
 @font-face {
     font-family: 'proximanovacond bold';
+    src: url('/fonts/Demo_Fonts/Fontspring-DEMO-proximanovacond-bold.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'proximanovacond exbold';
     src: url('/fonts/Demo_Fonts/Fontspring-DEMO-proximanovacond-extrabold.otf') format("opentype");
 }
 
@@ -57,10 +62,39 @@
     src: url('/fonts/Demo_Fonts/Fontspring-DEMO-proximanovacond-light.otf') format("opentype");
 }
 
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+
+section {
+    position: relative;
+
+}
+
+.up {
+    display: flex;
+    flex-direction: row-reverse;
+    position: sticky;
+    margin-right: 1rem;
+    bottom:0;
+    z-index: 10;
+}
+
+.up img {
+    width: 40px;
+    height: auto;
+}
+
 nav {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    position: relative;
     height: 120px;
     padding: 15px;
     background-color: black;
@@ -78,14 +112,17 @@ nav ul {
 nav ul ul {
     display: none;
 }
-/*
+
 nav li:hover ul {
     display:block;
+    position: absolute;
+    z-index: 2;
     padding: 10px;
+    font-family: "proximanovaex bold";
     font-size: 17px;
-    font-weight: 700;
-    background-color: red;
-}*/
+    text-transform: none;
+    background-color: #db0d15;
+}
 
 ul {
     list-style: none;
@@ -96,9 +133,31 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    color: #db0d15;
+    transition: 0.3s;
+}
+
+ul li ul a:hover {
+    color: #ef9898;
+}
 .network {
     display: flex;
-    gap: 20px;
+}
+
+.lang {
+    font-family: "proximanovaex exbold";
+    font-size: 20px;
+}
+
+.pl:hover {
+    color: #db0d15;
+    transition: 0.3s;
+}
+
+.eng:hover {
+    color: #db0d15;
+    transition: 0.3s;
 }
 
 .network img {
@@ -135,7 +194,7 @@ a {
     display: flex;
     flex-direction: column;
     position: absolute;
-    font-family: "proximanovacond bold";
+    font-family: "proximanovacond exbold";
     font-size: 39px;
     color: #fff;
     letter-spacing: 7px;
@@ -146,13 +205,31 @@ a {
     z-index: 1;
 }
 
+.down img{
+    position: absolute;
+    z-index: 3;
+    top: 555px;
+    left: 920px;
+    width: 40px;
+    height: auto;
+    -webkit-animation: mover 2s infinite  alternate;
+    animation: mover 2s infinite  alternate;
+}
+
 .more {
     display: flex;
     justify-content: center;
-    gap: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1320px;
+    margin-top: 50px;
+    padding-top: 30px;
+    gap: 2.4rem;
 }
 
 .meet img, .join img {
+    width: 636px;
+    height: 477px;
     filter: brightness(0.6);
 }
 
@@ -183,12 +260,12 @@ a {
 }
 
 .btn1, .btn2 {
-    width: 255px;
+    width: 225px;
     height: 50px;
-    margin: 0 5px;
+    margin: 0 10px;
     padding: 5px 10px;
     border: 2px solid #ff0000;
-    border-radius: 25px;
+    border-radius: 99px;
     background-color: transparent;
     color: #fff;
     font-family: "proximanovacond bold";
@@ -202,7 +279,11 @@ a {
 
 .rulestxt, .jointxt {
     display: flex;
-    padding: 20px 0;
+    justify-content:space-around;
+    margin-left: auto;
+    margin-right: auto;
+    width: 636px;
+    padding: 2rem 0;
     color: #000;
 }
 
@@ -212,7 +293,7 @@ a {
     font-family: "proximanovaex exbold";
     font-size: 35px;
     text-transform: uppercase;
-    line-height: 30px;
+    line-height: 2.5rem;
 }
 
 .rules2, .join2 {
@@ -234,10 +315,10 @@ p {
     position: relative;
     justify-content: center;
     align-items: center;
-    width: 70%;
+    margin: 90px auto 130px auto;
+    max-width: 1270px;
     background-color: #171717;
-    padding: 55px;
-
+    padding: 30px;
 }
 
 .letter img {
@@ -251,7 +332,6 @@ p {
     text-transform: uppercase;
     display: block;
     font-size: 55px;
-    font-weight: 800;
     color: #fff; 
 }
 
@@ -269,7 +349,7 @@ form {
     display: flex;
     justify-content: space-between;
     border: 1px solid #fff;
-    border-radius: 30px;
+    border-radius: 99px;
     background-color: #fff;
     margin-top: 20px;
     width: 100%;
@@ -277,7 +357,7 @@ form {
 
 .btn-mail {
     border: 1px solid #db0d15;
-    border-radius: 30px;
+    border-radius: 99px;
     background-color: #db0d15;
     color: #fff;
     width: 225px;
@@ -296,14 +376,14 @@ form {
 }
 
 input {
-    border-radius: 30px;
+    border-radius: 99px;
     font-size: 16px;
     border: none;
     padding: 10px;
 }
 
 input:focus {
-    outline: n;
+    outline: none;
 }
 ::placeholder {
     font-family: 'proximanovacond normal';
@@ -314,7 +394,7 @@ input:focus {
     display: flex;
     justify-content:center;
     gap: 3rem;
-    margin: 0 -10rem -2.7rem -10rem;
+    padding: 5rem;
     background-color: #f6f6f6;
 }
 
@@ -397,33 +477,41 @@ h3 span {
 
 .email {
     font-family: 'proximanovaex bold';
+    margin-top: 10px;
+    color: #171717;
     font-size: 24px;
 }
 
 .btn-contact {
     border: 1px solid #db0d15;
-    border-radius: 30px;
+    border-radius: 99px;
     background-color: #db0d15;
     color: #fff;
     width: 225px;
     height: 50px;
-    margin: 5px;
+    margin-top: 50px;
     font-size: 17px;
     font-family: 'proximanovaex bold';
     text-transform: uppercase;
-    transition: 0.4s;
+    transition: 0.3s;
+}
+
+.btn-contact:hover {
+    background-color: #fff;
+    color: #ff0000;
+
 }
 
 footer {
-    display: flex;
-    flex-direction: column;
-    background-color: black;
+    background-color: #171717;
 }
 
 .menudown {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1320px;
     align-items: center;
     height: 100px;
     color: white;
@@ -449,7 +537,8 @@ footer img {
 
 .secondmenu {
     display: flex;
-    justify-content: center;
+    justify-content:space-evenly;
+    margin-left: auto;
+    margin-right: auto;
     color: #484c53;
-    margin: 10px; 
 }
