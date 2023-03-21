@@ -385,10 +385,12 @@ input {
 input:focus {
     outline: none;
 }
+
 ::placeholder {
     font-family: 'proximanovacond normal';
     opacity: 0.25;
 }
+
 
 .studio {
     display: flex;
@@ -541,4 +543,34 @@ footer img {
     margin-left: auto;
     margin-right: auto;
     color: #484c53;
+}
+
+@media screen and (max-width: 500px) {
+
+    .more {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .rulestxt, .jointxt {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 490px;
+    }
+
+    .letter {
+        width: 450px;
+    }
+
+    .studio {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .locations {
+        display: flex;
+        flex-direction: row;
+    }
 }
