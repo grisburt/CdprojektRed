@@ -236,7 +236,6 @@ ul li ul a:hover {
 }
 
 .meet img, .join img {
-    width: 100%;
     height: auto;
     filter: brightness(0.6);
 }
@@ -293,16 +292,15 @@ ul li ul a:hover {
     justify-content:space-around;
     margin-left: auto;
     margin-right: auto;
-    width: 636px;
     padding: 2rem 0;
     color: #000;
 }
 
 .rules1, .rules2, .join1, .join2 {
     display: block;
-    width: 250px;
     font-family: "proximanovaex exbold";
     font-size: 35px;
+    padding-right: 2rem;
     text-transform: uppercase;
     line-height: 2.5rem;
 }
@@ -461,6 +459,7 @@ h3 span {
     display: flex;
     flex-wrap: wrap;
     position: relative;
+    max-width: 1000px;
     width: 100%;
     gap: 24px;
     padding-top: 50px;
@@ -639,8 +638,14 @@ footer img {
         flex-direction: column;
     }
 
+    .studio h3 {
+        font-size: 28px;
+    }
+
     .locations {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
+        justify-content:space-around;
     }
 }
